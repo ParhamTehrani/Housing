@@ -19,6 +19,8 @@
     <tr>
         <th>Address</th>
         <th>Users</th>
+        <th>Edit</th>
+        <th>Delete</th>
     </tr>
     @foreach($properties as $val)
         <tr>
@@ -31,6 +33,16 @@
                 @foreach($val->user as $value)
                     {{$value->lastName}}
                 @endforeach
+            </td>
+            <td>
+                <a href="/property/{{$val->id}}/edit/" >edit</a>
+            </td>
+            <td>
+                <form action="{{url('property/'.$val->id.'destroy')}}" method="post">
+                    {{ method_field('delete') }}
+                    {{csrf_field()}}
+                    <button type="submit" >delete</button>
+                </form>
             </td>
         </tr>
     @endforeach

@@ -16,11 +16,16 @@
     <option value="{{$val->id}}">{{$val->house_name_number}}</option>
     @endforeach
 </select>
-<select name="user_id[]" id="" multiple>
+    <div>
     @foreach($user as $val)
-        <option value="{{$val->id}}">{{$val->lastName}}</option>
+        <div>
+            <label>
+                {{$val->lastName}}
+            </label>
+            <input  name="user_id[]" type="checkbox" value="{{$val->id}}" checked >
+        </div>
     @endforeach
-</select>
+    </div>
     <input type="submit">
 </form>
 </body>

@@ -20,14 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31e59754-ff67-4cd1-8d65-2eb3323a26cb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/property/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/property/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/property/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Address.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Address.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Owner.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Owner.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PropertyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PropertyController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Property.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Property.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/property/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/property/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/property/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/property/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +188,7 @@
       <workItem from="1603139196330" duration="2106000" />
       <workItem from="1603153140723" duration="1142000" />
       <workItem from="1603154340559" duration="1448000" />
-      <workItem from="1603183569562" duration="7300000" />
+      <workItem from="1603183569562" duration="10898000" />
     </task>
     <servers />
   </component>

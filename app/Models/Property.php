@@ -9,10 +9,14 @@ class Property extends Model
 {
     protected $guarded=[];
     protected $table='property';
+
     public function user()
     {
         return $this->belongsToMany(User::class);
     }
-
+    public function address()
+    {
+        return $this->hasOne(Address::class);
+    }
 
 }

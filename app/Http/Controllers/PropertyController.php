@@ -6,6 +6,7 @@ use App\Models\Address;
 use App\Models\Property;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PropertyController extends Controller
 {
@@ -37,6 +38,40 @@ class PropertyController extends Controller
             ]);
             $property->user()->attach($array[$val->id]);
         }
+        return redirect(url('/property'));
+    }
+
+    public function edit(Property $property)
+    {
+        $address=Address::all();
+        $user=User::all();
+        $selectedAddress=Address::where('id',$property->address_id)->first();
+        return view('property.edit',compact('property','address','user','selectedAddress'));
+    }
+
+    public function update(Request $request,Property $property)
+    {
+        DB::table('property_user')->where('property_id',$property->id)->delete();
+        $user=User::whereIn('id',$request->user_id)->get();
+        $array=array();
+        foreach ($user as $val)
+        {
+            $array[$val->id]=array([
+                'user_id'=>$val->id,
+                'property_id'=>$property->id
+            ]);
+            $property->user()->attach($array[$val->id]);
+        }
+
+        $data=$request->all();
+        unset($data['user_id']);
+        $property->update($data);
+        return redirect(url('/property'));
+    }
+    public function destroy(Property $property)
+    {
+        $property->delete();
+        DB::table('property_user')->where('property_id',$property->id)->delete();
         return redirect(url('/property'));
     }
 }
