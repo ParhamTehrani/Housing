@@ -8,9 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Owner extends Model
 {
     protected $guarded=[];
+    protected $table='owner';
 
-    public function properties()
-    {
-        return $this->belongsToMany(Property::class);
-    }
 }

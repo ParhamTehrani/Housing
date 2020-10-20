@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Address extends Model
 {
-    use HasFactory;
+    protected $table='address';
+    protected $guarded=[];
+    public function property()
+    {
+        return $this->hasOne(Property::class);
+    }
 }

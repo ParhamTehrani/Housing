@@ -10,7 +10,7 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;
-
+    protected $keyType='string';
     /**
      * The attributes that are mass assignable.
      *
@@ -45,5 +45,9 @@ class User extends Authenticatable
     public function phone()
     {
         return $this->belongsToMany(Phone::class);
+    }
+    public function property()
+    {
+        return $this->belongsToMany(Owner::class);
     }
 }

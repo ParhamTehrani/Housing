@@ -7,14 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Property extends Model
 {
-
-    public function owners()
+    protected $guarded=[];
+    protected $table='property';
+    public function user()
     {
-        return $this->belongsToMany(Owner::class);
+        return $this->belongsToMany(User::class);
     }
 
-    public function address()
-    {
-        return $this->hasOne(Address::class);
-    }
+
 }
