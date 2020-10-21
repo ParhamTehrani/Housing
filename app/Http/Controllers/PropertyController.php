@@ -5,28 +5,38 @@ namespace App\Http\Controllers;
 use App\Models\Address;
 use App\Models\Property;
 use App\Models\User;
+use App\Repository\Repo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class PropertyController extends Controller
 {
+    protected $property;
+    protected $address;
+    protected $user;
+    public function __construct(Property $property,Address $address,User $user)
+    {
+        $this->property = new Repo($property);
+        $this->address = new Repo($address);
+        $this->user = new Repo($user);
+    }
     public function index()
     {
-        $properties=Property::all();
+        $properties=$this->property->all();
         return view('property.index',compact('properties'));
     }
     public function create()
     {
-        $address=Address::all();
-        $user=User::all();
+        $address=$this->address->all();
+        $user=$this->user->all();
         return view('property.create',compact('address','user'));
     }
     public function store(Request $request)
     {
-
-        $property=Property::create([
+        $property=[
             'address_id'=>$request->address_id
-        ]);
+        ];
+        $propertyId=$this->property->create($property);
 
         $user=User::whereIn('id',$request->user_id)->get();
         $array=array();
@@ -34,25 +44,31 @@ class PropertyController extends Controller
         {
             $array[$val->id]=array([
                 'user_id'=>$val->id,
-                'property_id'=>$property->id
+                'property_id'=>$propertyId->id
             ]);
-            $property->user()->attach($array[$val->id]);
+            $propertyId->user()->attach($array[$val->id]);
         }
         return redirect(url('/property'));
     }
 
     public function edit(Property $property)
     {
-        $address=Address::all();
-        $user=User::all();
-        $selectedAddress=Address::where('id',$property->address_id)->first();
+        $address=$this->address->all();
+        $user=$this->user->all();
+        $selectedAddress=$this->address->show($property->address_id);
         return view('property.edit',compact('property','address','user','selectedAddress'));
     }
 
     public function update(Request $request,Property $property)
     {
         DB::table('property_user')->where('property_id',$property->id)->delete();
+
+
+
         $user=User::whereIn('id',$request->user_id)->get();
+
+
+
         $array=array();
         foreach ($user as $val)
         {
@@ -65,7 +81,7 @@ class PropertyController extends Controller
 
         $data=$request->all();
         unset($data['user_id']);
-        $property->update($data);
+        $this->property->update($data,$property->id);
         return redirect(url('/property'));
     }
     public function destroy(Property $property)

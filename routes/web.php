@@ -17,4 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::resource('property','App\Http\Controllers\PropertyController');
+Route::resource('answer','App\Http\Controllers\AnswerController');
