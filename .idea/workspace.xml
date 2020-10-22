@@ -21,12 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="31e59754-ff67-4cd1-8d65-2eb3323a26cb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PropertyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PropertyController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repository/IRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/IRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repository/Repo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/Repo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/property/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/property/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_20_010115_create_owner_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_20_010115_create_owner_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +184,8 @@
       <workItem from="1603139196330" duration="2106000" />
       <workItem from="1603153140723" duration="1142000" />
       <workItem from="1603154340559" duration="1448000" />
-      <workItem from="1603183569562" duration="20415000" />
+      <workItem from="1603183569562" duration="21467000" />
+      <workItem from="1603387645503" duration="335000" />
     </task>
     <servers />
   </component>
@@ -221,6 +217,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1603236532433" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1603306763464">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1603306763464" />
     <state x="511" y="71" key="NewPhpClassDialog" timestamp="1603232932354">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -229,6 +229,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="517" y="283" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1603232918430" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1603298825989">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1603298825989" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1603296325614">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

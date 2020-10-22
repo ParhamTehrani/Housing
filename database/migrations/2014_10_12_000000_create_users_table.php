@@ -15,7 +15,6 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->uuid('id');
-            $table->enum('ownerType',['1','2']);
             $table->string('firstName');
             $table->string('lastName');
             $table->timestamps();

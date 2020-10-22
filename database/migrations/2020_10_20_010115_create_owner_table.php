@@ -15,6 +15,7 @@ class CreateOwnerTable extends Migration
     {
         Schema::create('owner', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained();
             $table->boolean('main_owner');
             $table->timestamps();
         });

@@ -17,6 +17,7 @@ class CreatePhoneUserTable extends Migration
             $table->foreignId('phone_id');
             $table->foreignId('user_id');
         });
+
     }
 
     /**
